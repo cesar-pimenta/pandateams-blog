@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 
-{% block title %} teste {% endblock %}
+{% block base %}
+    <main role="main">
+        {% block index %}
 
-{% block content %}
-<h1>teste</h1>
+        {% endblock %}
+    </main>
 {% endblock %}

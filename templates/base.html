@@ -1,19 +1,23 @@
 {% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+
 <!DOCTYPE html>
-<heade>
+<head>
     <title>
         {% block title %}{% endblock %}
     </title>
-</heade>
+</head>
 <body>
-    <div id='content'>
-        {% block content %}
+    {% include 'header/header.html' %}
+    <div class="container">
+        {% block base %}
 
         {% endblock %}
     </div>
-    <div id='sidebar'>
-        <h2>My blog</h2>
-        <p>This is my blog.</p>
-    </div>
+    {% bootstrap_javascript jquery='full' %}
+    {% bootstrap_messages %}
+    <script>
+
+    </script>
 </body>
-</html>
